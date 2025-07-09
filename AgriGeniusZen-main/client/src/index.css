@@ -1,0 +1,107 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 0 0% 100%;
+    --foreground: 120 4% 15%;
+    
+    --card: 0 0% 100%;
+    --card-foreground: 120 4% 15%;
+    
+    --popover: 0 0% 100%;
+    --popover-foreground: 120 4% 15%;
+    
+    --primary: 122 39% 49%;
+    --primary-foreground: 355 100% 100%;
+    
+    --secondary: 25 19% 47%;
+    --secondary-foreground: 355 100% 100%;
+    
+    --muted: 210 40% 96.1%;
+    --muted-foreground: 120 4% 45%;
+    
+    --accent: 199 98% 48%;
+    --accent-foreground: 355 100% 100%;
+    
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 355 100% 100%;
+    
+    --border: 120 5% 94%;
+    --input: 120 5% 88%;
+    --ring: 120 39% 49%;
+    
+    --chart-1: 122 39% 49%;
+    --chart-2: 25 19% 47%;
+    --chart-3: 199 98% 48%;
+    --chart-4: 39 84% 65%;
+    --chart-5: 0 84% 60%;
+    
+    --radius: 0.8rem;
+  }
+  
+  * {
+    @apply border-border;
+  }
+  
+  body {
+    font-family: 'Poppins', sans-serif;
+    @apply antialiased bg-[#fafaf8] text-foreground;
+    background-image: linear-gradient(to bottom right, rgba(139, 195, 74, 0.05), rgba(76, 175, 80, 0.05), rgba(179, 229, 252, 0.1));
+  }
+  
+  h1, h2, h3, h4, h5, h6 {
+    font-family: 'Quicksand', sans-serif;
+  }
+  
+  .handwritten {
+    font-family: 'Caveat', cursive;
+  }
+  
+  .glass {
+    background: rgba(255, 255, 255, 0.8);
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+  }
+  
+  /* Animation for floating leaves */
+  @keyframes float {
+    0% { transform: translateY(0px) rotate(0deg); }
+    50% { transform: translateY(-10px) rotate(5deg); }
+    100% { transform: translateY(0px) rotate(0deg); }
+  }
+  
+  .float-animation {
+    animation: float 6s ease-in-out infinite;
+  }
+  
+  .float-animation-alt {
+    animation: float 8s ease-in-out infinite reverse;
+  }
+  
+  /* Smooth transition for time-based UI changes */
+  .transition-time {
+    transition: background-color 2s ease-in-out, color 2s ease-in-out;
+  }
+  
+  /* Custom scrollbar */
+  ::-webkit-scrollbar {
+    width: 8px;
+  }
+  
+  ::-webkit-scrollbar-track {
+    background: rgba(255, 255, 255, 0.5);
+    border-radius: 10px;
+  }
+  
+  ::-webkit-scrollbar-thumb {
+    background: rgba(139, 195, 74, 0.5);
+    border-radius: 10px;
+  }
+  
+  ::-webkit-scrollbar-thumb:hover {
+    background: rgba(76, 175, 80, 0.7);
+  }
+}
